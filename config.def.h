@@ -1,7 +1,7 @@
 /* See LICENSE file for copyright and license details. */
 
 /* interval between updates (in ms) */
-const unsigned int interval = 500;
+const unsigned int interval = 1000;
 
 /* text to show if no value can be retrieved */
 static const char unknown_str[] = "n/a";
@@ -62,33 +62,6 @@ static const char unknown_str[] = "n/a";
  * wifi_essid          WiFi ESSID                      interface name (wlan0)
  */
 static const struct arg args[] = {
-
 	/* function format          argument */
-
-	{ netspeed_tx, "wifi speed: %s     ",	"wlo1"},
-	{ wifi_perc, "wifi: %s(%)     ",	     "wlo1" },
-	{ cpu_perc, "cpu: %s(%)     ",	NULL},
-
-//	{ temp, "T1: %s  ", "/sys/class/thermal/thermal_zone0/temp" },
-//	{ temp, "T2: %s  ", "/sys/class/thermal/thermal_zone1/temp" },
-//	{ temp, "T3: %s  ", "/sys/class/thermal/thermal_zone2/temp" },
-//	{ temp, "T4: %s  ", "/sys/class/thermal/thermal_zone3/temp" },
-//	{ temp, "T5: %s  ", "/sys/class/thermal/thermal_zone4/temp" },
-//	{ temp, "T6: %s  ", "/sys/class/thermal/thermal_zone5/temp" },
-//	{ temp, "T7: %s  ", "/sys/class/thermal/thermal_zone6/temp" },
-	{ temp, "temp: %s (C)     ", "/sys/class/thermal/thermal_zone7/temp" },
-//	{ temp, "T9: %s  ", "/sys/class/thermal/thermal_zone8/temp" },
-//	{ temp, "T10: %s     ", "/sys/class/thermal/thermal_zone9/temp" },
-
-
-	{ ram_used, "ram used: %s ", 	    NULL}, 
-	{ ram_perc, "(%s%)     ", "NULL"},
-	{ ram_free, "ram avail: %s     ",   NULL },
-
-	{ battery_perc, "batt: (%s%) ", "BAT0"},
- 	{ battery_remaining,  "%s     ", 	"BAT0"},
-	{ kernel_release, "%s     ", NULL},
-	{ datetime, "%s", "%F %T" },
-
-
+	{ datetime, "%s",           "%F %T" },
 };
